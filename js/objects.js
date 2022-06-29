@@ -447,3 +447,21 @@
 // const { title : firstTitle, author, isPublic, rating, coverImage } = book;
 // console.log(firstTitle);
 
+
+
+
+// const obj = {
+//   name: 'bobby',
+//   sayName() {
+//     console.log(`Hallo ${this.name}`)
+//   }
+// }
+
+// function myBind(object, callback) {
+//   return function n() {
+//    callback.call(object)
+//   }
+// }
+// // myBind(obj, obj.sayName)
+// const fn = myBind(obj, obj.sayName)
+// fn(); // Hallo bobby

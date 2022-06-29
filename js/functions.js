@@ -1150,11 +1150,32 @@ const buddies = [
 
 // console.log(countPositivesSumNegatives([]))
 
-function validatePIN (pin) {
-  for (let i of pin) {
-  
-        if (!Number(i)) return false;
-    }
-    return pin.length === 4 || pin.length === 6;
-}
-console.log(validatePIN('a234'))
+// function alphabetPosition(text) {
+//   const alph = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+//   const textSplit = text.toLowerCase().split(" ")
+
+//    let array = [];
+
+//   for (let i = 0; i < textSplit.length; i += 1) {
+   
+//     const word = textSplit[i].replace(/[^a-zа-яё]/gi, '').split('')
+//     const indexLetter = word.reduce((summ, letter) => (alph.indexOf(letter) + 1) + summ, 0)
+//     array.push(indexLetter)
+
+//   }
+//   const longestWord = textSplit.filter(w => array.indexOf(Math.max(...array)) === textSplit.indexOf(w))
+//   return `${longestWord}`;
+
+// }
+
+// console.log(alphabetPosition("The word is ended soon"))
+
+// var number = function (busStops) { 
+// return busStops.filter(stop => stop[0] - stop[1])
+// }
+// console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]))
+
+// function a(arr) {
+//   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+// }
+// console.log(a([1, -3, 4, -6, 0, 5, -8]))

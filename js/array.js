@@ -520,3 +520,44 @@
 // const a = { name: "Speed potion", price: 460 };
 
 // console.log(findShort(a))
+
+// const bool = [true, false, '', null, 0, 2]
+
+// const fill = bool.filter(Boolean)
+
+// console.log(fill)
+
+// const array = ['audi', 'bmw', 'alfa', 'citroen']
+
+// const obj = { ...array }
+
+// console.log(obj)
+
+
+// УНИКАЛЬНЫЕ ЗНАЧЕНИЯ
+
+// const nums = [1, 1, 2, 2, 3, 3, 4, 3, 5, 5, 6, 77, 2, 1, 5]
+
+// const array = ['audi', 'bmw', 'alfa', 'citroen', 'citroen', 'alfa']
+
+// let uniNums = [...new Set(nums)]
+// let uniCars = [...new Set(array)]
+// console.log(uniNums)
+// console.log(uniCars)
+
+// let filterCars = array.filter((c, i, a) => a.indexOf(c) === i)
+// let filterNums = nums.filter((c, i, a) => a.indexOf(c) === i)
+// console.log(filterCars)
+// console.log(filterNums)
+
+// let uni_cars = Array.from(new Set(array))
+// let uni_nums = Array.from(new Set(nums))
+// console.log(uni_cars)
+// console.log(uni_nums)
+
+// СЛУЧАЙНОЕ ЧИСЛО
+
+// const nums = [1, 1, 2, 2, 3, 3, 4, 3, 5, 5, 6, 77, 2, 1, 5, 88, 95]
+
+// const rundom_num = nums[(Math.floor(Math.random() * (nums.length)))]
+// console.log(rundom_num)
