@@ -338,7 +338,7 @@
 
 // function sumMix(x) {
 //     let total = 0;
-    
+
 //     for (let nums of x) {
 //         total += Number(nums);
 //     }
@@ -350,7 +350,7 @@
 // let total = 0;
 
 //     for (let game of games) {
-    
+
 //         if (game[0] > game[game.length - 1]) {
 //             total += 3;
 //         } else if (game[0] === game[game.length - 1])
@@ -380,7 +380,7 @@
 //     let total = 0;
 
 //     return total = 1000 * (h*3600 + m*60 + s);
-    
+
 
 // }
 
@@ -400,7 +400,7 @@
 //     for (i = 0; i < array.length; i += 1) {
 //        newArray.push(array[i].toUpperCase() + array[i].repeat(i))
 //     }
-    
+
 // return newArray.join('-')
 // }
 
@@ -817,7 +817,7 @@ const buddies = [
 // console.log(getTotalFriendCount(users))
 
 // console.log(getUserNames(users))
-  
+
 // const ages = [26, 27, 26, 26, 28, 28, 29, 29, 30]
 // const uniqueAges = ages.filter((x, i, a) => a.indexOf(x) === i)
 // console.log(uniqueAges)
@@ -852,7 +852,7 @@ const buddies = [
 // function solution(str, ending) {
 // console.log(str.length - 1)
 //     return str.indexOf(ending)
-   
+
 // }
 
 
@@ -860,21 +860,21 @@ const buddies = [
 // console.log(solution('abcde', 'cde'))
 
 // function highAndLow(numbers){
-   
+
 //     numbers = numbers.split(' ')
 //     return `${Math.max(...numbers)} ${Math.min(...numbers)}`
-   
+
 // }
 
 // console.log(highAndLow("1 2 3 4 5"))
 
 // function getMiddle(s){
-   
+
 //   let evenOdd = s.length % 2 === 0
 //     let minMid = s.charAt(s.length / 2 - 1)
 //     console.log(minMid)
 //   let mid = s.charAt(s.length/2)
-  
+
 //   return (evenOdd == true)? minMid.concat(mid): mid
 // }
 
@@ -894,7 +894,7 @@ const buddies = [
 //       array.push(number + value)
 //     } 
 //       array.push(number)
-  
+
 //   })
 //   return array;
 //   // Change code above this line
@@ -923,7 +923,7 @@ const buddies = [
 //     ...player,
 //     playtime: player.playtime + 100, 
 // })})
-  
+
 // console.log(getNewPlayersTime)
 
 // console.log(getNewPlayersTime)
@@ -935,7 +935,7 @@ const buddies = [
 //      return onSuccess(pizzaName)
 //     }
 //  return  onError(`There is no pizza with a name ${pizzaName} in the assortment.`)
-    
+
 //    },
 // };
 // // Change code above this line
@@ -1067,7 +1067,7 @@ const buddies = [
 // function persistence(num) {
 //   let result = 0;
 //   let test = num;
-  
+
 //   while (String(test).split('').length > 1) {
 //     test = String(test).split('').map(Number).reduce((a, b) => a * b, 1);
 //     console.log(test)
@@ -1134,12 +1134,12 @@ const buddies = [
 
 // console.log(alphabetPosition("The sunset sets at ,,, twelve o' clock."))
 // function countPositivesSumNegatives(input) {
- 
+
 //   if (input[0] === 0 && input[input.length - 1] === 0 && input.length <= 2 ) {
 //     return [];
 //     }
-  
- 
+
+
 //   const positiveArray = input.filter(number => number > 0).length
 
 //   const negativeArray = input.filter(number => number < 0).reduce((total, number) => total + number, 0)
@@ -1157,7 +1157,7 @@ const buddies = [
 //    let array = [];
 
 //   for (let i = 0; i < textSplit.length; i += 1) {
-   
+
 //     const word = textSplit[i].replace(/[^a-zа-яё]/gi, '').split('')
 //     const indexLetter = word.reduce((summ, letter) => (alph.indexOf(letter) + 1) + summ, 0)
 //     array.push(indexLetter)
@@ -1179,3 +1179,54 @@ const buddies = [
 //   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
 // }
 // console.log(a([1, -3, 4, -6, 0, 5, -8]))
+
+// function XO(str) {
+//   const newStr = str.toLowerCase().split('')
+//   const findX = newStr.reduce((total, letter) => {
+//     if (letter === 'x') {
+//      total +=1
+//     }
+//     return total;
+//  }, 0)
+
+//    const findO = newStr.reduce((total, letter) => {
+//     if (letter === 'o') {
+//      total +=1
+//     }
+//     return total;
+//    }, 0)
+  
+//   return findO === findX;
+//   }
+
+  
+// console.log(XO("xo"))
+// console.log(XO("xxo"))
+// console.log(XO("zzzz"))
+
+// function removeSmallest(numbers) {
+//   return numbers.filter((n, i, a) => i !== a.indexOf(Math.min(...a) ))
+// }
+
+// console.log(removeSmallest([1, 2, 3, 4, 5]))
+
+// function wave(str) {
+//   let waveArr = [];
+//   for(let i = 0; i < str.length; i++) {
+//     let letter = str[i];
+//     if (letter === " ") {
+//       continue;
+//     } else {
+//       waveArr.push(str.slice(0, i) + letter.toUpperCase() + str.slice(i + 1))
+//     } 
+//   }
+//   return waveArr;
+// }
+
+// console.log(wave('Hallo'))
+
+// function getExtremeElements(array) {
+//  return array.slice(0, 1).concat(array.slice(-1))
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5]))
