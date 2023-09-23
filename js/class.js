@@ -16,10 +16,8 @@
 
 //     padBoth(str) { 
 //     return `${str} ${this.value} ${str}`;
-    
 //     }
 // }
-
 
 // // Change code above this line
 // const builder = new StringBuilder(".");
@@ -30,5 +28,3 @@
 // console.log(builder.getValue()); // "^.^"
 // builder.padBoth("=");
 // console.log(builder.getValue()); // "=^.^="
-
-

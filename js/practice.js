@@ -293,6 +293,21 @@
 // let message = (92 > '11' && 58 < 100) ? 'Истина!' : 'Ложь!';
 // console.log(message);
 
+function oddEvenNumber(num) {
+    const arr = String(num).split('');
+    return arr.reduce((acc, num) => Number(num) % 2 === 0 ? acc = { ...acc, odd: acc.odd += 1 } :{ ...acc, even: acc.even+=1 }
+    , {odd: 0, even: 0});
+}
+
+console.log(oddEvenNumber(1235))
+
+function changeWordsOrder(string) {
+    return string.split(" ").sort((firstWord, secondWord) => firstWord.length - secondWord.length);
+}
+
+console.log(changeWordsOrder("Hello World my dear friends"))
+
+
 // if (0) {
 // 	console.log('Ложь!');
 // } else if (" ") {
