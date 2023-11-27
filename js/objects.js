@@ -465,3 +465,6 @@
 // // myBind(obj, obj.sayName)
 // const fn = myBind(obj, obj.sayName)
 // fn(); // Hallo bobby
+
+
+

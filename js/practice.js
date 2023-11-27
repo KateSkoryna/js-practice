@@ -293,19 +293,172 @@
 // let message = (92 > '11' && 58 < 100) ? 'Истина!' : 'Ложь!';
 // console.log(message);
 
-function oddEvenNumber(num) {
-    const arr = String(num).split('');
-    return arr.reduce((acc, num) => Number(num) % 2 === 0 ? acc = { ...acc, odd: acc.odd += 1 } :{ ...acc, even: acc.even+=1 }
-    , {odd: 0, even: 0});
-}
+// function oddEvenNumber(num) {
+//     const arr = String(num).split('');
+//     return arr.reduce((acc, num) => Number(num) % 2 === 0 ? acc = { ...acc, odd: acc.odd += 1 } :{ ...acc, even: acc.even+=1 }
+//     , {odd: 0, even: 0});
+// }
 
-console.log(oddEvenNumber(1235))
+// console.log(oddEvenNumber(1235))
 
-function changeWordsOrder(string) {
-    return string.split(" ").sort((firstWord, secondWord) => firstWord.length - secondWord.length);
-}
+// function changeWordsOrder(string) {
+//     return string.split(" ").sort((firstWord, secondWord) => firstWord.length - secondWord.length);
+// }
 
-console.log(changeWordsOrder("Hello World my dear friends"))
+// console.log(changeWordsOrder("Hello World my dear friends"))
+
+// function getModifiedArray(array) {
+
+//     return ['Start', ...array.slice(1, -1), "End"];
+// }
+
+// console.log(getModifiedArray([6, 5, 4, 5]))
+
+// const filterNums = (arr, num = 0, param = 'greater') => {
+//     return arr.filter(el => param === 'greater' ? el > num : el < num);
+// };
+
+// console.log(filterNums([-1, 2, 4, 0, 55, -12, 3], 11, 'greater'));
+
+// const maxInterv = (...array) => {
+//     return array.length === 1 ? 0 : Math.max(...array.map((num, index, arr) => Math.abs(arr[(index + 1)] - arr[index])).filter(el => !isNaN(el)))
+// }
+// const maxInterv = (...array) => {
+//     return Math.max(...array.map((num, index, arr) =>
+//         arr.length === 1 || index === arr.length - 1 ? 0 : arr[(index + 1)] - arr[index]).map(el => Math.abs(el)))
+// }
+
+// console.log(maxInterv(1, 5))
+
+// const sumOfLen = (...array) => {
+//     return array.reduce((acc, curr) => acc + curr.length, 0);
+// }
+
+// console.log(sumOfLen('hallo', 'hi'))
+
+
+// const salary = ['100', '200']
+// salary.unshift("1000", "1350")
+
+// console.log(salary)
+
+// function combineArray(arr1, arr2) {
+//     return [...arr1, ...arr2].filter(el => typeof(el) === "number");
+// }
+
+// console.log(combineArray([12, "User01", 22, true, -8], ["Index", 6, null, 15]));
+
+// function longestLogin(loginList) {
+//     return loginList.reduce((acc, curr) =>
+//         acc.length > curr.length ? acc : curr, '')
+// }
+
+// console.log(longestLogin(["serg22", "tester_2", "Prokopenko", "guest"]))
+
+// function factorial(n) {
+//     let f = 1;
+//     for (let i = 1; i <= n; i+= 1) {
+//         f *= i;
+//     }
+//     return f;
+// }
+
+// function processArray(arr, factorial) {
+//     return arr.map(num => factorial(num));
+// }
+
+// console.log(processArray([1, 2, 3, 4, 5], factorial));
+
+// const multiplyNum = function (tech, overload) {
+//   return typeof (tech) === "number" ? tech * overload : tech.map(num => num * overload);
+// }
+
+// function overloadedFunc(technique = [1, 2, 3], overload = 2, func = multiplyNum ){
+//     return func(technique,overload );
+// }
+
+// console.log(overloadedFunc(10));
+
+// const negate = function(x){ return -x; };
+
+// const halve = function(x){ return x / 2; };
+
+// const square = function(x){ return x * x; };
+
+// const double = function(x){ return 2 * x; };
+
+// const combineFunctions = (...arguments) => n => {
+//     if (!arguments.length) {
+//         return n;
+//     }
+//     return arguments.reduce((acc, fn) => fn(acc),n);
+// };
+
+
+// console.log(combineFunctions(x => x + x, x => x - 1, x => x !== 0)(3));
+
+	
+// let students = [{
+//   name: 'Anna',
+//   languages: ['English', 'Ukrainian'],
+//   age: 21
+// }, {
+//   name: 'Bob',
+//   languages: ['Polish', 'Spanish'],
+//   age: 26
+// }, {
+//   name: 'Alice',
+//   languages: ['Italian', 'Russian'],
+//   age: 18
+// }];
+
+// const getLanguages = (students, ...arguments) => {
+//     if (!arguments.length) {
+//         return students.flatMap(({languages}) => languages);
+//     }
+//     return students.reduce((result, student) => {
+//         if (arguments[0](student)) {
+//             result.push(...student.languages);
+//             return result;
+//         }
+//         return result;
+//     },[])
+// };
+
+// console.log(getLanguages(students))
+
+// const upperCase = string => {
+//     return string.toUpperCase();
+// }
+// const tripleExclaim = (string) => {
+//     return `${string}!!!`;
+// }
+// const split = (separator) => string => {
+//     return string.split(separator);
+// }
+// const join = (separator) => string => {
+//     return string.join(separator);
+// }
+// const copy = (string) => {
+//     return `${string} ${string}`;
+// }
+
+// const createComposition = (...arguments) => value => {
+//     return arguments.reduceRight((result, fn) => fn(result), value);
+// }
+
+// const result = (value) => {
+//     return createComposition(copy, join(" "), split("_"), tripleExclaim, upperCase)(value);
+// }
+
+// console.log(upperCase('make_a_choice'));
+// console.log(tripleExclaim(upperCase('make_a_choice')));
+// console.log(split(tripleExclaim(upperCase('make_a_choice')), "_"))
+// console.log(join(split(tripleExclaim(upperCase('make a choice')), " "), " "))
+// console.log(copy(join(split(tripleExclaim(upperCase('make a choice')), " "), " ")))
+// console.log(createComposition(copy, join, split, tripleExclaim, upperCase)('make_a_choice'))
+// console.log(result("buy_ticket_now"))
+
 
 
 // if (0) {
@@ -320,4 +473,193 @@ console.log(changeWordsOrder("Hello World my dear friends"))
 
 // }
 
+// const teams = [
+//   { name: "Team 1", members: ['Paul', 'T'] },
+//   {name: "Team 2", members: ['Laura', 'J']}
+// ]
 
+// function* getM(members) {
+//     console.log(members)
+//   for (let i = 0; i < members.length; i++) {
+//     yield members[i];
+//   }
+// }
+
+// function* getT(teams) {
+//     for (let i = 0; i < teams.length; i++) {
+//       console.log(teams[i].members)
+//     yield* getM(teams[i].members)
+//   }
+// }
+
+// const obj = getT(teams);
+// console.log(obj.next())
+// console.log(obj.next())
+
+// async function* range(start, end) {
+//     for (i = start; i <= end; i++) {
+//         yield Promise.resolve(i)
+//     }
+// }
+
+// (async () => {
+//     const gen = range(1, 3)
+//     for await (const item of gen) {
+//         console.log(item)
+//     }
+// })();
+
+// const myP = () => Promise.resolve("I have r!")
+
+// function firstFunc() {
+//     myP().then(res => console.log(res))
+//     console.log('second')
+// }
+
+// async function secondFunc() {
+//     console.log(await myP());
+//     console.log('second')
+// }
+
+// firstFunc();
+// secondFunc();
+
+// function* generator(i) {
+//     yield i;
+//     yield i * 2;
+// }
+
+// const gen = generator(10)
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+
+// async function f() {
+//     let result = "first!"
+//     let promise = new Promise((resolve, rej) => {
+//         setTimeout(() => resolve('done!', 1000));
+//     })
+
+//     result = await promise;
+//     console.log(result)
+// }
+
+// f();
+
+
+// function job(state) {
+//     return new Promise(function (resolve, reject) {
+//         if (state) {
+//             resolve('success')
+//         } else {
+//             reject('error')
+//         }
+//     })
+// }
+
+// let promise = job(true)
+
+// promise.then(function (data) {
+//     console.log(data);
+//     return job(false)
+// }).catch(function (error) {
+//     console.log(error);
+//     return 'Error catch'
+// }).then(function (data) {
+//     console.log(data);
+//     return job(true)
+// }).catch(function (error) {
+//     console.log(error);
+//     return 'Error catch'
+// })
+
+// function getPromise(delay, message) {
+//     return setTimeout(()=> Promise.resolve(message), delay)
+// }
+
+	
+// getPromise(2000, "hello").then(function(data) {
+//     console.log(data);
+// });
+// const end = Date.now() + 3000;
+//   while (Date.now() < end) {
+//     const muchCompute = 1 + 2 + 3;
+//   }
+
+
+function add(x, y) {
+    return new Promise((resolve, reject) => {
+        if (typeof (x && y) === 'number') {
+            resolve(x + y);
+        } else {
+            reject('Error!')
+    }
+})
+};
+
+// add(2,2).then(res => console.log(res));
+// const end = Date.now() + 1000;
+// while (Date.now() < end) {
+//     const muchCompute = 1 + 2 + 3;
+// }
+
+	
+// add(2,"a").catch(err => console.log(err));
+// const end = Date.now() + 1000;
+// while (Date.now() < end) {
+//     const muchCompute = 1 + 2 + 3;
+// }
+
+
+// const accountPatients = (capacity) => {
+//     let num = capacity;
+//         const admit = () => {
+//             if (num) {
+//                 num -=1;
+//                 console.log(`A patient was admitted, ${num} beds are available`)
+//             } else {
+//                 console.log('Can not admit a patient, no beds available')
+//             }
+//         }
+//     const discharge = () => {
+//         if (num === capacity) {
+//                 console.log('There are no patients to discharge')
+//             } else {
+//                 num +=1;
+//                 console.log(`A patient was discharged, ${num} beds are available`)
+//             }
+//         } 
+//     return [admit, discharge];
+// }
+
+// const [admit, discharge] = accountPatients(100);
+// admit();
+// admit();
+// admit();
+// admit();
+// discharge();
+
+function checkAdult(age) {
+    try {
+    if (age >= 18) {
+        console.log('Access allowed')
+    } else if (age <= 18 && age >= 0){
+        throw new Error('Access denied - you are too young!')
+    } else if (!age) {
+        throw new Error('Please, enter your age')
+    } else if (typeof(age) !== 'number') {
+        throw new Error('Please, enter number')
+    } else if (age < 0) {
+        throw new Error('Please, enter positive number')
+    } else if (age % 1 != 0) {
+        throw new Error('Please, enter Integer number')
+    }
+} catch (error) {
+    console.log(`${(error.name)} ${(error.message)}`)
+} finally {
+console.log('Age verification complete')
+}
+    }
+
+checkAdult(25);
+checkAdult();
+checkAdult(-22);
