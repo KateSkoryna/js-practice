@@ -189,3 +189,31 @@
 //     }
 // }
 
+
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     printNameArrow() {
+//         console.log(this)
+//         const a = () => {
+//             console.log(this)
+//             console.log("Arrow: " + this.name)
+//         };
+//         return a();
+//     }
+
+//     printNameFunction() {
+//         console.log(this)
+//         function b() {
+//             console.log(this)
+//         console.log("Function: " + this.name)
+//         }
+//         return b();
+//     }
+// }
+
+// const person = new Person("Kyle")
+// person.printNameArrow()
+// person.printNameFunction()

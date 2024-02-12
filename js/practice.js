@@ -638,28 +638,28 @@ function add(x, y) {
 // admit();
 // discharge();
 
-function checkAdult(age) {
-    try {
-    if (age >= 18) {
-        console.log('Access allowed')
-    } else if (age <= 18 && age >= 0){
-        throw new Error('Access denied - you are too young!')
-    } else if (!age) {
-        throw new Error('Please, enter your age')
-    } else if (typeof(age) !== 'number') {
-        throw new Error('Please, enter number')
-    } else if (age < 0) {
-        throw new Error('Please, enter positive number')
-    } else if (age % 1 != 0) {
-        throw new Error('Please, enter Integer number')
-    }
-} catch (error) {
-    console.log(`${(error.name)} ${(error.message)}`)
-} finally {
-console.log('Age verification complete')
-}
-    }
+// function checkAdult(age) {
+//     try {
+//     if (age >= 18) {
+//         console.log('Access allowed')
+//     } else if (age <= 18 && age >= 0){
+//         throw new Error('Access denied - you are too young!')
+//     } else if (!age) {
+//         throw new Error('Please, enter your age')
+//     } else if (typeof(age) !== 'number') {
+//         throw new Error('Please, enter number')
+//     } else if (age < 0) {
+//         throw new Error('Please, enter positive number')
+//     } else if (age % 1 != 0) {
+//         throw new Error('Please, enter Integer number')
+//     }
+// } catch (error) {
+//     console.log(`${(error.name)} ${(error.message)}`)
+// } finally {
+// console.log('Age verification complete')
+// }
+//     }
 
-checkAdult(25);
-checkAdult();
-checkAdult(-22);
+// checkAdult(25);
+// checkAdult();
+// checkAdult(-22);
