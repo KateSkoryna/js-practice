@@ -586,15 +586,15 @@
 //   }
 
 
-function add(x, y) {
-    return new Promise((resolve, reject) => {
-        if (typeof (x && y) === 'number') {
-            resolve(x + y);
-        } else {
-            reject('Error!')
-    }
-})
-};
+// function add(x, y) {
+//     return new Promise((resolve, reject) => {
+//         if (typeof (x && y) === 'number') {
+//             resolve(x + y);
+//         } else {
+//             reject('Error!')
+//     }
+// })
+// };
 
 // add(2,2).then(res => console.log(res));
 // const end = Date.now() + 1000;
@@ -602,7 +602,6 @@ function add(x, y) {
 //     const muchCompute = 1 + 2 + 3;
 // }
 
-	
 // add(2,"a").catch(err => console.log(err));
 // const end = Date.now() + 1000;
 // while (Date.now() < end) {
